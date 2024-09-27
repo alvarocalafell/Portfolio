@@ -1,14 +1,16 @@
-import React, {useState, useEffect, lazy, Suspense} from "react";
-import {openSource} from "../../portfolio";
-import Contact from "../contact/Contact";
-import Loading from "../loading/Loading";
+import React, { useState, useEffect, lazy, Suspense } from "react"; // Added useState, useEffect, and Suspense
+import { openSource } from "../../portfolio"; // Importing openSource from portfolio
+import Contact from "../contact/Contact"; // Importing Contact component
+import Loading from "../loading/Loading"; // Importing Loading component
 
-const renderLoader = () => <Loading />;
+const renderLoader = () => <Loading />; // Defining renderLoader function
 const GithubProfileCard = lazy(() =>
-  import("../../components/githubProfileCard/GithubProfileCard")
+  import("../../components/githubProfileCard/GithubProfileCard") // Lazy loading GithubProfileCard component
 );
+
 export default function Profile() {
-  const [prof, setrepo] = useState([]);
+  const [prof, setrepo] = useState([]); // useState hook defined
+
   function setProfileFunction(array) {
     setrepo(array);
   }
@@ -36,6 +38,7 @@ export default function Profile() {
       getProfileData();
     }
   }, []);
+
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&
@@ -47,6 +50,6 @@ export default function Profile() {
       </Suspense>
     );
   } else {
-    return <Contact />;
+    return prof !== "Error" ? <Contact /> : null; // Ensuring no empty string is returned
   }
 }
