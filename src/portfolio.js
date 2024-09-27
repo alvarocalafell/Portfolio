@@ -46,7 +46,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Ecole Polytechnique & HEC Paris",
-      logo: require("./assets/images/HEC-X.jpg"), // Add this logo to your assets
+      logo: require("./assets/images/HEC-X.png"), // Add this logo to your assets
       subHeader: "MSc in Data Science",
       duration: "2022 - 2024",
       desc: "Pursuing advanced studies in Data Science, Machine Learning, and Artificial Intelligence.",
