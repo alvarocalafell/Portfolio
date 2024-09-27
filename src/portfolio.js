@@ -149,12 +149,12 @@ const bigProjects = {
   projects: [
     {
       //image: require("./assets/images/hyperfastLogo.png"), // Create and add this logo
-      projectName: "HyperFast v2",
-      projectDesc: "A highly distributed meta-trained hypernetwork for instant tabular data classification",
+      projectName: "PaliGemma: Multimodal Language Model from Scratch",
+      projectDesc: "PaliGemma is a transformer-based model that combines vision and language processing capabilities.",
       footerLink: [
         {
           name: "View Project",
-          //url: "https://github.com/alvarocalafell/hyperfast-v2" // Add the actual link when available
+          url:"https://github.com/alvarocalafell/Gemma-MLM-from-scratch" // 
         }
       ]
     },
