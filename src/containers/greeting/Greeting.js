@@ -5,6 +5,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import profilePic from "../../assets/images/profile/profile.jpg";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -12,42 +13,73 @@ export default function Greeting() {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
-        <div className="greeting-main">
-          <div className="greeting-text-div">
-            <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {greeting.title}
-              </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
-                {greeting.subTitle}
-              </p>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <a
-                    href={require("./AlvaroCalafell_resume.pdf")}
-                    download="AlvaroCalafell_resume.pdf"
-                    className="download-link-button"
+    <div className="main" id="greeting">
+      <div className="greet-main">
+        <Fade bottom duration={1000} distance="40px">
+          <div className="greeting-main">
+            <div className="greeting-text-div">
+              <div>
+                <h1
+                  className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+                >
+                  {greeting.title}
+                </h1>
+                <p
+                  className={
+                    isDark
+                      ? "dark-mode greeting-text-p"
+                      : "greeting-text-p subTitle"
+                  }
+                >
+                  {greeting.subTitle}
+                </p>
+                {greeting.description && (
+                  <p
+                    className={
+                      isDark
+                        ? "dark-mode greeting-text-p"
+                        : "greeting-text-p"
+                    }
                   >
-                    <Button text="Download my resume" />
-                  </a>
+                    {greeting.description}
+                  </p>
                 )}
+                {greeting.callToAction && (
+                  <p
+                    className={
+                      isDark
+                        ? "dark-mode greeting-text-p call-to-action"
+                        : "greeting-text-p call-to-action"
+                    }
+                  >
+                    {greeting.callToAction}
+                  </p>
+                )}
+                <SocialMedia />
+                <div className="button-greeting-div">
+                  {greeting.resumeLink && (
+                    <a
+                      href={greeting.resumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="download-link-button"
+                    >
+                      <Button text="DOWNLOAD MY RESUME" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
+            <div className="greeting-image-div">
+              <img 
+                src={profilePic} 
+                alt="Alvaro Calafell" 
+                className="profile-image"
+              />
+            </div>
           </div>
-        </div>
+        </Fade>
       </div>
-    </Fade>
+    </div>
   );
 }

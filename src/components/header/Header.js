@@ -6,15 +6,17 @@ import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
   workExperiences,
-  openSource,
-  resumeSection
+  educationInfo,
+  bigProjects,
+  publicationsSection
 } from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewResume = resumeSection.display;
+  const viewEducation = educationInfo.display;
+  const viewProjects = bigProjects.display;
+  const viewPublications = publicationsSection.display;
 
   return (
     <Headroom>
@@ -33,24 +35,26 @@ function Header() {
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
+          {viewPublications && (
+            <li>
+              <a href="#publications">Publications</a>
+            </li>
+          )}
+          {viewProjects && (
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+          )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">Work Experience</a>
             </li>
           )}
-          {viewOpenSource && (
+          {viewEducation && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#education">Education</a>
             </li>
           )}
-          {viewResume && (
-            <li>
-              <a href="#resume">Resume</a>
-            </li>
-          )}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>

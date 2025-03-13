@@ -16,6 +16,12 @@ export default function ExperienceCard({cardInfo, isDark}) {
       ? null
       : "rgb(" + values.join(", ") + ")";
   }
+  
+  function openCompanyWebsite() {
+    if (cardInfo.companyUrl) {
+      window.open(cardInfo.companyUrl, "_blank");
+    }
+  }
 
   const GetDescBullets = ({descBullets, isDark}) => {
     return descBullets
@@ -31,7 +37,10 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
+    <div 
+      className={isDark ? "experience-card-dark" : "experience-card"}
+      onClick={openCompanyWebsite}
+    >
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">

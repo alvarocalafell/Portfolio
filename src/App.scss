@@ -4,6 +4,7 @@
   text-align: center;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 .App-logo {
@@ -23,8 +24,47 @@
 
 .App-link {
   color: $appLink;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: darken($appLink, 15%);
+    text-decoration: none;
+  }
 }
 
 .subTitle {
   color: $subTitle;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// Add smooth scrolling for the entire site
+html {
+  scroll-behavior: smooth;
+}
+
+// Improve button styling
+button, .button {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Improve section spacing
+section, .section, .main {
+  padding: 4rem 0;
+}
+
+// Add fade-in animation for content
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
 }

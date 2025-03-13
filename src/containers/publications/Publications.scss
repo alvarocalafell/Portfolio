@@ -1,0 +1,80 @@
+@import "../../_globalColor";
+
+.publications-main-div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+
+.publications-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.publications-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+}
+
+.publications-subtitle {
+  color: $textColor;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 10px 0px;
+}
+
+.dark-mode.publications-subtitle {
+  color: $textColorDark;
+}
+
+.publications-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 2rem;
+}
+
+/* Set a fixed height for all publication cards */
+.publications-cards-div .publication-card {
+  height: 750px;
+}
+
+@media (max-width: 1380px) {
+  .publications-heading {
+    font-size: 40px;
+  }
+  
+  .publications-cards-div {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+  
+  .publications-cards-div .publication-card {
+    height: 780px;
+  }
+}
+
+@media (max-width: 768px) {
+  .publications-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .publications-subtitle {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .publications-cards-div {
+    grid-template-columns: 1fr;
+  }
+  
+  .publications-cards-div .publication-card {
+    height: auto;
+    min-height: 750px;
+  }
+} 

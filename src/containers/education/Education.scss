@@ -1,6 +1,10 @@
+@import "../../_globalColor";
+
 .education-heading {
   font-size: 56px;
   font-weight: 400;
+  line-height: normal;
+  margin: 0px;
 }
 
 .education-section {
@@ -9,42 +13,61 @@
   width: 90%;
   padding: 20px 0px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
-.education-section > * {
-  flex: 1;
-  margin-bottom: 30px;
+.education-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.education-subtitle {
+  color: $textColor;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 10px 0px;
+}
+
+.dark-mode.education-subtitle {
+  color: $textColorDark;
 }
 
 .education-card-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 @media (max-width: 1380px) {
-  .education-card-container {
-    padding-top: 0px;
-  }
   .education-heading {
     font-size: 40px;
   }
-  .education-text-subtitle {
+  
+  .education-subtitle {
     font-size: 18px;
-    text-align: center;
+  }
+  
+  .education-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .education-card-container {
-    padding-top: 0px;
-  }
   .education-heading {
     font-size: 30px;
     text-align: center;
   }
-  .education-text-subtitle {
+  
+  .education-subtitle {
     font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  .education-card-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

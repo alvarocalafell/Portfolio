@@ -10,6 +10,7 @@
 .dark-menu {
   background-color: $darkBackground !important;
   color: $textColorDark;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 .dark-menu li a {
@@ -18,6 +19,7 @@
 
 .dark-menu li a:hover {
   background-color: $buttonColor !important;
+  color: white !important;
 }
 
 .header {
@@ -25,6 +27,8 @@
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .header ul {
@@ -38,16 +42,40 @@
   color: $subTitle;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $buttonColor;
+}
+
 .header li a {
   display: block;
   padding: 15px 20px;
   color: $textColor;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0 5px;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: $headerHoverBG;
+  transform: translateY(-2px);
+  color: $buttonColor;
 }
 
 .header .logo {

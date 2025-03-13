@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
-import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
-import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
+import Publications from "./publications/Publications";
 import Footer from "../components/footer/Footer";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
@@ -46,11 +45,10 @@ const Main = () => {
           <>
             <Header />
             <Greeting />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StackProgress />
+            <Publications />
             <StartupProject />
+            <WorkExperience />
+            <Education />
             <Profile />
             <Footer />
             <ScrollToTopButton />

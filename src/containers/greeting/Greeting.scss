@@ -8,35 +8,87 @@
 }
 
 .greet-main {
+  display: flex;
+  flex-direction: column;
   width: 90%;
-  padding: 20px 10px;
+  padding: 20px 0px;
   margin: 0px auto;
   margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .greeting-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
+  background-color: $lightBackground2;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: $lightBoxShadow;
+  transition: all 0.3s ease;
+  border-left: 4px solid $buttonColor;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $lightBoxShadowDarker;
+  }
+}
+
+.dark-mode .greeting-main {
+  background-color: $darkBackground;
+  box-shadow: $darkBoxShadow;
+  
+  &:hover {
+    box-shadow: $darkBoxShadow2;
+  }
 }
 
 .greeting-text-div {
-  width: 50%; /* Take up half the page */
+  width: 65%;
   text-align: left;
-  padding-right: 20px; /* Add space between text and image */
+  padding-right: 0;
+}
+
+.greeting-image-div {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px -15px $lightBoxShadowDark;
+  border: 5px solid $lightBackground3;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .profile-image {
+  border: 5px solid $darkBackground;
 }
 
 .subTitle {
   color: $subTitle !important;
 }
 
+.call-to-action {
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 10px;
+  color: $textColor;
+  font-size: 20px;
+}
+
+.dark-mode .call-to-action {
+  color: $textColorDark;
+}
+
 .button-greeting-div {
   display: flex;
   margin-top: 20px;
-  gap: 15px; /* Add space between the buttons */
 }
 
 .download-link-button {
@@ -44,25 +96,36 @@
 }
 
 .greeting-text {
-  font-size: 60px; /* Reduce size slightly */
+  font-size: 45px;
   line-height: 1.1;
   color: $textColor !important;
+  margin: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .greeting-text-p {
-  font-size: 24px; /* Adjust the font size for a cleaner look */
-  line-height: 36px;
-  margin-bottom: 20px; /* Add spacing between text and icons */
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: $cardSubtitle;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
+.dark-mode .greeting-text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .greeting-text-p {
+  color: $textColorDark;
 }
 
 .social-media {
   display: flex;
-  gap: 15px; /* Add spacing between social icons */
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -75,16 +138,16 @@
 }
 
 .button {
-  background-color: #e74c3c;
+  background-color: $buttonColor;
   padding: 10px 20px;
-  border-radius: 6px; /* Add rounded corners */
+  border-radius: 6px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #c0392b; /* Add a hover effect */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: $buttonHover;
+  box-shadow: 0 4px 12px $lightBoxShadow;
 }
 
 @keyframes wave {
@@ -114,41 +177,74 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 38px;
+    height: 70px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 17px;
+    line-height: 28px;
+  }
+  .call-to-action {
+    font-size: 17px;
+  }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  .greeting-main {
+    padding: 25px;
   }
 }
 
 @media (max-width: 768px) {
-  .greet-main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .greeting-text-div {
-    width: 100%;
-    text-align: center;
-  }
-  .button-greeting-div {
-    justify-content: space-around;
-  }
   .greeting-text {
     font-size: 30px;
     text-align: center;
+    height: auto;
+    min-height: 60px;
   }
   .greeting-text-p {
     font-size: 16px;
     line-height: normal;
     text-align: center;
   }
+  .call-to-action {
+    font-size: 16px;
+  }
+  .greeting-main {
+    flex-direction: column-reverse;
+    padding: 25px;
+    gap: 20px;
+  }
+  .greeting-text-div {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
   .greeting-image-div {
-    height: 256px;
+    width: 100%;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-greeting-div {
+    justify-content: center;
+  }
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+  .social-media {
+    justify-content: center;
   }
 }
 
 @media (max-width: 320px) {
-  .main {
-    width: auto;
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  .greeting-main {
+    padding: 15px;
   }
 }
