@@ -12,17 +12,32 @@ export default function Footer() {
       <div className={isDark ? "dark-mode footer-div" : "footer-div"}>
         <div className="footer-links">
           {socialMediaLinks.github && (
-            <a href={socialMediaLinks.github} className="footer-social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href={socialMediaLinks.github}
+              className="footer-social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-github"></i>
             </a>
           )}
           {socialMediaLinks.linkedin && (
-            <a href={socialMediaLinks.linkedin} className="footer-social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href={socialMediaLinks.linkedin}
+              className="footer-social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-linkedin-in"></i>
             </a>
           )}
           {socialMediaLinks.gmail && (
-            <a href={`mailto:${socialMediaLinks.gmail}`} className="footer-social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href={`mailto:${socialMediaLinks.gmail}`}
+              className="footer-social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fas fa-envelope"></i>
             </a>
           )}

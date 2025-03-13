@@ -20,7 +20,9 @@ export default function Greeting() {
             <div className="greeting-text-div">
               <div>
                 <h1
-                  className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+                  className={
+                    isDark ? "dark-mode greeting-text" : "greeting-text"
+                  }
                 >
                   {greeting.title}
                 </h1>
@@ -36,9 +38,7 @@ export default function Greeting() {
                 {greeting.description && (
                   <p
                     className={
-                      isDark
-                        ? "dark-mode greeting-text-p"
-                        : "greeting-text-p"
+                      isDark ? "dark-mode greeting-text-p" : "greeting-text-p"
                     }
                   >
                     {greeting.description}
@@ -71,9 +71,9 @@ export default function Greeting() {
               </div>
             </div>
             <div className="greeting-image-div">
-              <img 
-                src={profilePic} 
-                alt="Alvaro Calafell" 
+              <img
+                src={profilePic}
+                alt="Alvaro Calafell"
                 className="profile-image"
               />
             </div>

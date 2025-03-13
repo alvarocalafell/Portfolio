@@ -34,4 +34,4 @@ export default function PublicationCard({publication, index}) {
       </div>
     </div>
   );
-} 
+}

@@ -4,7 +4,7 @@
   text-align: center;
   width: 100%;
   overflow-x: hidden;
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-family: "Montserrat", "Open Sans", sans-serif;
 }
 
 .App-logo {
@@ -25,7 +25,7 @@
 .App-link {
   color: $appLink;
   transition: color 0.3s ease;
-  
+
   &:hover {
     color: darken($appLink, 15%);
     text-decoration: none;
@@ -44,10 +44,11 @@ html {
 }
 
 // Improve button styling
-button, .button {
+button,
+.button {
   transition: all 0.3s ease;
   border-radius: 4px;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -55,14 +56,22 @@ button, .button {
 }
 
 // Improve section spacing
-section, .section, .main {
+section,
+.section,
+.main {
   padding: 4rem 0;
 }
 
 // Add fade-in animation for content
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {

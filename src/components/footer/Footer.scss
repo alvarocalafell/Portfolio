@@ -46,7 +46,7 @@
   color: $buttonColor;
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background-color: $buttonColor;
     color: white;
@@ -58,7 +58,7 @@
 .dark-mode .footer-social-link {
   background-color: $darkBackground;
   color: $textColorDark;
-  
+
   &:hover {
     background-color: $buttonColor;
     color: white;

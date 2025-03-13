@@ -7,18 +7,26 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Publications() {
   const {isDark} = useContext(StyleContext);
-  
+
   if (!publicationsSection.display) {
     return null;
   }
-  
+
   return (
     <div className="main" id="publications">
       <div className="publications-main-div">
         <Fade bottom duration={1000} distance="20px">
           <div className="publications-header">
-            <h1 className="heading publications-heading">{publicationsSection.title}</h1>
-            <p className={isDark ? "dark-mode publications-subtitle" : "publications-subtitle"}>
+            <h1 className="heading publications-heading">
+              {publicationsSection.title}
+            </h1>
+            <p
+              className={
+                isDark
+                  ? "dark-mode publications-subtitle"
+                  : "publications-subtitle"
+              }
+            >
               {publicationsSection.subtitle}
             </p>
           </div>
@@ -36,4 +44,4 @@ export default function Publications() {
       </div>
     </div>
   );
-} 
+}

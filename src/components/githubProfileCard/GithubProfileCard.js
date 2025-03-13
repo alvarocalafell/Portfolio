@@ -17,8 +17,7 @@ export default function GithubProfileCard({prof}) {
         <h1 className="prof-title">Reach Out to me!</h1>
         <div className="row">
           <div className="main-content-profile">
-            <div className="blog-header">
-            </div>
+            <div className="blog-header"></div>
             <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
             {prof.location !== null && (
               <div className="location-div">

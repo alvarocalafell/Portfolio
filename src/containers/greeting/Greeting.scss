@@ -27,7 +27,7 @@
   box-shadow: $lightBoxShadow;
   transition: all 0.3s ease;
   border-left: 4px solid $buttonColor;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: $lightBoxShadowDarker;
@@ -37,7 +37,7 @@
 .dark-mode .greeting-main {
   background-color: $darkBackground;
   box-shadow: $darkBoxShadow;
-  
+
   &:hover {
     box-shadow: $darkBoxShadow2;
   }

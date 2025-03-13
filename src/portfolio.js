@@ -26,7 +26,8 @@ const greeting = {
   description: emoji(
     "Welcome to my portfolio! Here you'll find my latest research, projects, and publications in artificial intelligence and machine learning. I'm currently focused on developing scalable AI systems and exploring the intersection of computer vision and natural language processing."
   ),
-  callToAction: "Let's connect and explore how we can collaborate on innovative AI solutions!",
+  callToAction:
+    "Let's connect and explore how we can collaborate on innovative AI solutions!",
   resumeLink:
     "https://drive.google.com/file/d/1DWtACOD1llYBXpTH0rYySPpTiE-am3h-/view?usp=sharing",
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -163,7 +164,6 @@ const openSource = {
   display: true // Set false to hide this section, defaults to true
 };
 
-
 // Big projects section
 
 const bigProjects = {
@@ -173,7 +173,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/transformerLogo.png"), // Create and add this logo
       projectName: "Transformer from Scratch",
-      projectDesc: "Implemented a complete Transformer model based on the groundbreaking 'Attention Is All You Need' paper using PyTorch. Developed an English-to-Italian translator with a modular architecture that can be easily adapted to other language pairs through configuration files. The implementation includes multi-head attention mechanisms, positional encodings, and transformer encoder-decoder blocks.",
+      projectDesc:
+        "Implemented a complete Transformer model based on the groundbreaking 'Attention Is All You Need' paper using PyTorch. Developed an English-to-Italian translator with a modular architecture that can be easily adapted to other language pairs through configuration files. The implementation includes multi-head attention mechanisms, positional encodings, and transformer encoder-decoder blocks.",
       footerLink: [
         {
           name: "View Project",
@@ -188,7 +189,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/paligemmaLogo.png"), // Create and add this logo
       projectName: "Multimodal Language Model from Scratch",
-      projectDesc: "Built a vision-language model (similar to PaliGemma/Gemma) from scratch using only Python and PyTorch. Implemented cross-modal attention mechanisms to enable the model to understand and generate text based on visual inputs. The architecture includes a vision encoder, text encoder, and decoder components with efficient parameter sharing and optimization techniques.",
+      projectDesc:
+        "Built a vision-language model (similar to PaliGemma/Gemma) from scratch using only Python and PyTorch. Implemented cross-modal attention mechanisms to enable the model to understand and generate text based on visual inputs. The architecture includes a vision encoder, text encoder, and decoder components with efficient parameter sharing and optimization techniques.",
       footerLink: [
         {
           name: "View Project",
@@ -203,7 +205,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/stableDiffusionLogo.png"), // Create and add this logo
       projectName: "Stable Diffusion from Scratch",
-      projectDesc: "Developed a complete implementation of Latent Diffusion Models (Stable Diffusion) using PyTorch. Built the U-Net architecture with attention mechanisms, implemented the diffusion process (forward and reverse), and integrated CLIP text conditioning. Optimized the model for efficient inference on consumer hardware and created a user-friendly interface for text-to-image generation.",
+      projectDesc:
+        "Developed a complete implementation of Latent Diffusion Models (Stable Diffusion) using PyTorch. Built the U-Net architecture with attention mechanisms, implemented the diffusion process (forward and reverse), and integrated CLIP text conditioning. Optimized the model for efficient inference on consumer hardware and created a user-friendly interface for text-to-image generation.",
       footerLink: [
         {
           name: "View Project",
@@ -218,7 +221,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/vectorDBLogo.png"), // Create and add this logo
       projectName: "Vector Database API",
-      projectDesc: "Created a Python-based REST API for a vector database with comprehensive CRUD operations and k-Nearest Neighbors (kNN) search capabilities. Implemented efficient vector indexing for fast similarity search, optimized for high-dimensional embeddings used in AI applications. The system includes authentication, rate limiting, and comprehensive documentation using OpenAPI/Swagger.",
+      projectDesc:
+        "Created a Python-based REST API for a vector database with comprehensive CRUD operations and k-Nearest Neighbors (kNN) search capabilities. Implemented efficient vector indexing for fast similarity search, optimized for high-dimensional embeddings used in AI applications. The system includes authentication, rate limiting, and comprehensive documentation using OpenAPI/Swagger.",
       footerLink: [
         {
           name: "View Project",
@@ -233,7 +237,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/methaneLogo.png"), // Create and add this logo
       projectName: "Methane Emission Detection",
-      projectDesc: "Developed an AI system to detect methane plumes from infrared satellite imagery. Combined transfer learning with PyTorch-based CNNs in an ensemble approach with traditional machine learning methods on tabular data. The model achieved high accuracy in identifying environmental hazards, providing a valuable tool for monitoring and reducing greenhouse gas emissions.",
+      projectDesc:
+        "Developed an AI system to detect methane plumes from infrared satellite imagery. Combined transfer learning with PyTorch-based CNNs in an ensemble approach with traditional machine learning methods on tabular data. The model achieved high accuracy in identifying environmental hazards, providing a valuable tool for monitoring and reducing greenhouse gas emissions.",
       footerLink: [
         {
           name: "View Project",
@@ -248,7 +253,8 @@ const bigProjects = {
     {
       //image: require("./assets/images/schneiderLogo.png"), // Create and add this logo
       projectName: "AI-Powered Price Forecasting",
-      projectDesc: "Developed a predictive analytics system for Schneider Electric to forecast plastic material costs using AI and historical data. Implemented time series forecasting models to predict prices for specific months, helping optimize procurement strategies and reduce financial risks. The system includes data preprocessing pipelines, model training workflows, and interactive visualization dashboards.",
+      projectDesc:
+        "Developed a predictive analytics system for Schneider Electric to forecast plastic material costs using AI and historical data. Implemented time series forecasting models to predict prices for specific months, helping optimize procurement strategies and reduce financial risks. The system includes data preprocessing pipelines, model training workflows, and interactive visualization dashboards.",
       footerLink: [
         {
           name: "View Project",
@@ -270,11 +276,15 @@ const publicationsSection = {
   subtitle: "RESEARCH PAPERS I'VE CONTRIBUTED TO",
   publications: [
     {
-      title: "Integrating Boosted Trees and Retrieval-Augmented Neural Networks via Meta-Trained Hypernetworks for Tabular Classification",
-      authors: "David Bonet, Marçal Comajoan Cara, Alvaro Calafell, Daniel Mas Montserrat, Alexander G. Ioannidis",
-      venue: "ICLR 2025 Workshop on Weight Space Learning (Spotlight) & ICML 2025 (Pending Acceptance)",
+      title:
+        "Integrating Boosted Trees and Retrieval-Augmented Neural Networks via Meta-Trained Hypernetworks for Tabular Classification",
+      authors:
+        "David Bonet, Marçal Comajoan Cara, Alvaro Calafell, Daniel Mas Montserrat, Alexander G. Ioannidis",
+      venue:
+        "ICLR 2025 Workshop on Weight Space Learning (Spotlight) & ICML 2025 (Pending Acceptance)",
       year: "2025",
-      abstract: "Recent progress in deep learning has not fully carried over to tabular data, where gradient-boosted decision trees (GBDTs) still dominate real-world applications. We introduce iLTM, an integrated Large Tabular Model that unifies GBDT embeddings, dimensionality-agnostic representations, meta-trained hypernetworks, strong multilayer perceptrons (MLPs), and retrieval components within a single architecture. Leveraging tree-based inductive biases and neural scalability, iLTM is pre-trained on over 1,800 heterogeneous datasets, achieving consistently superior performance on a wide range of disjoint classification tasks, from small datasets to large and high-dimensional real-world data.",
+      abstract:
+        "Recent progress in deep learning has not fully carried over to tabular data, where gradient-boosted decision trees (GBDTs) still dominate real-world applications. We introduce iLTM, an integrated Large Tabular Model that unifies GBDT embeddings, dimensionality-agnostic representations, meta-trained hypernetworks, strong multilayer perceptrons (MLPs), and retrieval components within a single architecture. Leveraging tree-based inductive biases and neural scalability, iLTM is pre-trained on over 1,800 heterogeneous datasets, achieving consistently superior performance on a wide range of disjoint classification tasks, from small datasets to large and high-dimensional real-world data.",
       links: [
         {
           name: "Paper",
@@ -287,11 +297,14 @@ const publicationsSection = {
       ]
     },
     {
-      title: "SNPUtils: A Python Library for Processing Genetic Variation and Population Structure",
-      authors: "Bonet, D., Comajoan Cara, M., Barrabés, M., et al. (Contributor: Alvaro Calafell)",
+      title:
+        "SNPUtils: A Python Library for Processing Genetic Variation and Population Structure",
+      authors:
+        "Bonet, D., Comajoan Cara, M., Barrabés, M., et al. (Contributor: Alvaro Calafell)",
       venue: "Bioinformatics Tools",
       year: "2023",
-      abstract: "SNPUtils is a Python package designed to ease the processing and analysis of genomic datasets, while handling all the complexities of different genome formats and operations efficiently. Developed as a collaborative effort between Stanford University's Department of Biomedical Data Science, UC Santa Cruz Genomics Institute, and contributors worldwide, this library provides robust tools for handling sequencing and ancestry data, with a focus on performance, ease of use, and advanced visualization capabilities.",
+      abstract:
+        "SNPUtils is a Python package designed to ease the processing and analysis of genomic datasets, while handling all the complexities of different genome formats and operations efficiently. Developed as a collaborative effort between Stanford University's Department of Biomedical Data Science, UC Santa Cruz Genomics Institute, and contributors worldwide, this library provides robust tools for handling sequencing and ancestry data, with a focus on performance, ease of use, and advanced visualization capabilities.",
       links: [
         {
           name: "Official Website",
@@ -315,7 +328,8 @@ const publicationsSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "My professional journey and qualifications",
-  resumeLink: "https://drive.google.com/file/d/1DWtACOD1llYBXpTH0rYySPpTiE-am3h-/view?usp=sharing",
+  resumeLink:
+    "https://drive.google.com/file/d/1DWtACOD1llYBXpTH0rYySPpTiE-am3h-/view?usp=sharing",
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -335,4 +349,3 @@ export {
   isHireable,
   resumeSection
 };
-

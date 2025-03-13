@@ -7,7 +7,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
-  
+
   if (workExperiences.display) {
     return (
       <div id="experience">
@@ -15,17 +15,23 @@ export default function WorkExperience() {
           <div className="experience-container">
             <div className="experience-header">
               <h1 className="experience-heading">Experiences</h1>
-              <p className={isDark ? "dark-mode experience-subtitle" : "experience-subtitle"}>
+              <p
+                className={
+                  isDark
+                    ? "dark-mode experience-subtitle"
+                    : "experience-subtitle"
+                }
+              >
                 {workExperiences.subtitle || "My professional journey"}
               </p>
             </div>
             <div className="experience-cards-div">
               {workExperiences.experience.map((card, i) => {
                 return (
-                  <Fade 
-                    bottom 
-                    duration={800} 
-                    distance="30px" 
+                  <Fade
+                    bottom
+                    duration={800}
+                    distance="30px"
                     key={i}
                     fraction={0.4}
                     delay={i * 100}

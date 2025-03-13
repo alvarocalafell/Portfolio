@@ -13,20 +13,24 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: $lightBoxShadowDarker;
   }
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, transparent 70%, rgba($buttonColor, 0.1) 100%);
+    background: linear-gradient(
+      135deg,
+      transparent 70%,
+      rgba($buttonColor, 0.1) 100%
+    );
     border-radius: 0 0 0 100%;
     z-index: 0;
   }
@@ -45,19 +49,23 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
+
   &:hover {
     transform: translateY(-5px);
   }
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, transparent 70%, rgba($buttonColor, 0.15) 100%);
+    background: linear-gradient(
+      135deg,
+      transparent 70%,
+      rgba($buttonColor, 0.15) 100%
+    );
     border-radius: 0 0 0 100%;
     z-index: 0;
   }
@@ -133,7 +141,7 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   transition: transform 0.3s ease;
-  
+
   .experience-card:hover & {
     transform: scale(1.05);
   }
@@ -207,10 +215,11 @@
 /* Media Query */
 
 @media (max-width: 1380px) {
-  .experience-card, .experience-card-dark {
+  .experience-card,
+  .experience-card-dark {
     height: 580px;
   }
-  
+
   .experience-text-role {
     padding-top: 0.5rem;
     font-size: 22px;
@@ -228,17 +237,19 @@
 }
 
 @media (max-width: 992px) {
-  .experience-card, .experience-card-dark {
+  .experience-card,
+  .experience-card-dark {
     height: 600px;
   }
 }
 
 @media (max-width: 768px) {
-  .experience-card, .experience-card-dark {
+  .experience-card,
+  .experience-card-dark {
     height: auto;
     min-height: 550px;
   }
-  
+
   .experience-text-role {
     font-size: 22px;
   }

@@ -25,9 +25,7 @@ export default function StartupProject() {
             <h1 className="heading projects-heading">{bigProjects.title}</h1>
             <p
               className={
-                isDark
-                  ? "dark-mode projects-subtitle"
-                  : "projects-subtitle"
+                isDark ? "dark-mode projects-subtitle" : "projects-subtitle"
               }
             >
               {bigProjects.subtitle}
@@ -37,10 +35,10 @@ export default function StartupProject() {
           <div className="projects-container">
             {bigProjects.projects.map((project, i) => {
               return (
-                <Fade 
-                  bottom 
-                  duration={800} 
-                  distance="30px" 
+                <Fade
+                  bottom
+                  duration={800}
+                  distance="30px"
                   key={i}
                   fraction={0.4}
                   delay={i * 100}
@@ -74,7 +72,9 @@ export default function StartupProject() {
                     )}
                     <div className="project-detail">
                       <h5
-                        className={isDark ? "dark-mode card-title" : "card-title"}
+                        className={
+                          isDark ? "dark-mode card-title" : "card-title"
+                        }
                       >
                         {project.projectName}
                       </h5>
@@ -92,9 +92,11 @@ export default function StartupProject() {
                               <span
                                 key={i}
                                 className={
-                                  isDark ? "dark-mode project-tag" : "project-tag"
+                                  isDark
+                                    ? "dark-mode project-tag"
+                                    : "project-tag"
                                 }
-                                onClick={(e) => {
+                                onClick={e => {
                                   e.stopPropagation();
                                   openUrlInNewTab(link.url);
                                 }}

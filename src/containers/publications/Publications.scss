@@ -47,11 +47,11 @@
   .publications-heading {
     font-size: 40px;
   }
-  
+
   .publications-cards-div {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
-  
+
   .publications-cards-div .publication-card {
     height: 780px;
   }
@@ -72,9 +72,9 @@
   .publications-cards-div {
     grid-template-columns: 1fr;
   }
-  
+
   .publications-cards-div .publication-card {
     height: auto;
     min-height: 750px;
   }
-} 
+}

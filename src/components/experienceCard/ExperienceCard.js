@@ -16,7 +16,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
       ? null
       : "rgb(" + values.join(", ") + ")";
   }
-  
+
   function openCompanyWebsite() {
     if (cardInfo.companyUrl) {
       window.open(cardInfo.companyUrl, "_blank");
@@ -37,7 +37,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   return (
-    <div 
+    <div
       className={isDark ? "experience-card-dark" : "experience-card"}
       onClick={openCompanyWebsite}
     >

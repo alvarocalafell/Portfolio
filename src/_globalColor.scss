@@ -1,10 +1,10 @@
 /* Global color configuration for portfolio */
 
 // Main color palette
-$primaryColor: #E70000;
-$secondaryColor: #C50000;
-$backgroundColor: #FAFAFA; // Changed to a more neutral off-white
-$lightGray: #F1F1F1;
+$primaryColor: #e70000;
+$secondaryColor: #c50000;
+$backgroundColor: #fafafa; // Changed to a more neutral off-white
+$lightGray: #f1f1f1;
 
 // Button colors
 $buttonColor: $primaryColor;
@@ -20,7 +20,7 @@ $talkCardSubTitle: #7f8287;
 $blogCardTitleColor: $secondaryColor;
 
 // Text color dark theme
-$textColorDark: #FFFFFF; // Pure white for dark theme text
+$textColorDark: #ffffff; // Pure white for dark theme text
 
 // Toggle switch colors
 $toggleCheck: $primaryColor;

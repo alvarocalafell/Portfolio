@@ -1,11 +1,11 @@
-import React, { useState, useEffect, lazy, Suspense } from "react"; // Added useState, useEffect, and Suspense
-import { openSource } from "../../portfolio"; // Importing openSource from portfolio
+import React, {useState, useEffect, lazy, Suspense} from "react"; // Added useState, useEffect, and Suspense
+import {openSource} from "../../portfolio"; // Importing openSource from portfolio
 import Contact from "../contact/Contact"; // Importing Contact component
 import Loading from "../loading/Loading"; // Importing Loading component
 
 const renderLoader = () => <Loading />; // Defining renderLoader function
-const GithubProfileCard = lazy(() =>
-  import("../../components/githubProfileCard/GithubProfileCard") // Lazy loading GithubProfileCard component
+const GithubProfileCard = lazy(
+  () => import("../../components/githubProfileCard/GithubProfileCard") // Lazy loading GithubProfileCard component
 );
 
 export default function Profile() {

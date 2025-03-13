@@ -11,13 +11,16 @@ export default function EducationCard({school}) {
     return descBullets
       ? descBullets.map((item, i) => {
           // Add bold formatting to text within ** markers
-          const formattedItem = item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-          
+          const formattedItem = item.replace(
+            /\*\*(.*?)\*\*/g,
+            "<strong>$1</strong>"
+          );
+
           return (
-            <li 
-              key={i} 
+            <li
+              key={i}
               className={isDark ? "dark-mode" : ""}
-              dangerouslySetInnerHTML={{ __html: formattedItem }}
+              dangerouslySetInnerHTML={{__html: formattedItem}}
             />
           );
         })
@@ -25,8 +28,10 @@ export default function EducationCard({school}) {
   };
 
   if (!school.logo)
-    console.error(`Image of ${school.schoolName} is missing in education section`);
-    
+    console.error(
+      `Image of ${school.schoolName} is missing in education section`
+    );
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className={isDark ? "education-card dark-mode" : "education-card"}>
@@ -45,13 +50,11 @@ export default function EducationCard({school}) {
             <h4 className="education-text-subHeader">{school.subHeader}</h4>
           </div>
         </div>
-        
+
         <span className="education-text-duration">{school.duration}</span>
-        
-        {school.desc && (
-          <p className="education-text-desc">{school.desc}</p>
-        )}
-        
+
+        {school.desc && <p className="education-text-desc">{school.desc}</p>}
+
         <div className="education-text-bullets">
           <ul>
             <GetDescBullets descBullets={school.descBullets} />

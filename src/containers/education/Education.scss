@@ -43,11 +43,11 @@
   .education-heading {
     font-size: 40px;
   }
-  
+
   .education-subtitle {
     font-size: 18px;
   }
-  
+
   .education-card-container {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 1.5rem;
@@ -59,13 +59,13 @@
     font-size: 30px;
     text-align: center;
   }
-  
+
   .education-subtitle {
     font-size: 16px;
     line-height: normal;
     text-align: center;
   }
-  
+
   .education-card-container {
     grid-template-columns: 1fr;
     gap: 1rem;
